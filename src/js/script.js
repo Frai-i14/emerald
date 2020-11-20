@@ -7,7 +7,8 @@ $(document).ready(function() {
     });
 
     // анимация перехода первого экрана
-    $('.switch_item').click(function (event) { 
+
+    function prev(event) { 
         let target = event.target;
 
         $('.switch_item').removeClass('switch_item-active');
@@ -33,7 +34,11 @@ $(document).ready(function() {
             $('.promo_img_item-slide').fadeOut();
             $('.promo_img_item-slide').addClass('pos');
         }
-    });
+    }
+
+    // setInterval(prev, 2000);
+
+    $('.switch_item').click(prev);
 
 
     // табы на втором экране
@@ -55,6 +60,15 @@ $(document).ready(function() {
         prevArrow: '<button type="button" class="slick-prev"><img src="icon/right-chevron1.svg"</button>',
         nextArrow: '<button type="button" class="slick-next"><img src="icon/right-chevron1.svg"></button>',
         dots: true,
+        responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                prevArrow: false,
+                nextArrow: false
+                
+              }
+            }]
     });
 
     //значения инпутов
@@ -85,7 +99,16 @@ $(document).ready(function() {
         nextArrow: '<button type="button" class="slick-next"><img src="icon/right-chevron1.svg"></button>',
         dots: true,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                prevArrow: false,
+                nextArrow: false
+                
+              }
+            }]
     });
 
 
@@ -139,5 +162,15 @@ $(document).ready(function() {
     button.addEventListener('click', function(){
         calc();
     });
+
+
+    //меню гамбургер
+    function showMenu() {
+        $('.menu_wrap').slideToggle();
+        $('.bg').slideToggle();
+    }
+
+    $('.hamburger').click(showMenu);
+    $('.bg').click(showMenu);
     
 });

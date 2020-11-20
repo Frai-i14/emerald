@@ -10,7 +10,25 @@ $(document).ready(function() {
         nextArrow: '<button type="button" class="slick-next"><img src="icon/right-chevron1.svg"></button>',
         dots: true,
         slidesToShow: 2,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+              breakpoint: 1200,
+              settings: {
+                prevArrow: false,
+                nextArrow: false
+                
+              }
+            }]
     });
+
+    //меню гамбургер
+    function showMenu() {
+        $('.menu_wrap').slideToggle();
+        $('.bg').slideToggle();
+    }
+
+    $('.hamburger').click(showMenu);
+    $('.bg').click(showMenu);
 
 });
