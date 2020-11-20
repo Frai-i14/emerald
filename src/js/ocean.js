@@ -16,8 +16,8 @@ $(document).ready(function() {
               breakpoint: 1200,
               settings: {
                 prevArrow: false,
-                nextArrow: false
-                
+                nextArrow: false,
+                slidesToShow: 1
               }
             }]
     });

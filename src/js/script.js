@@ -105,8 +105,17 @@ $(document).ready(function() {
               breakpoint: 1200,
               settings: {
                 prevArrow: false,
-                nextArrow: false
-                
+                nextArrow: false,
+                slidesToShow: 2,
+                slidesToScroll: 2
+               }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                prevArrow: false,
+                nextArrow: false,
               }
             }]
     });
