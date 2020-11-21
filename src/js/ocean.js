@@ -26,6 +26,7 @@ $(document).ready(function() {
     function showMenu() {
         $('.menu_wrap').slideToggle();
         $('.bg').slideToggle();
+        $('.hamburger').toggleClass('circular_rotation');
     }
 
     $('.hamburger').click(showMenu);
